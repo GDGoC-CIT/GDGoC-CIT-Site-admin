@@ -3,6 +3,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import API from "../services/api";
 
+
 export default function Login({ setAuthed }) {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -31,7 +32,6 @@ export default function Login({ setAuthed }) {
         });
       }
 
-      // Normal Login
       setAuthed(true);
       navigate("/dashboard");
     } catch (err) {
@@ -49,15 +49,15 @@ export default function Login({ setAuthed }) {
       <div className="w-full max-w-[350px] sm:max-w-[384px] md:max-w-md relative z-10">
         {/* Header */}
         <div className="text-center mb-8">
-          <div className="w-30 h-30 rounded-2xl mx-auto mb-4 flex items-center justify-center">
+          <div className="w-40 h-40 rounded-2xl mx-auto mb-4 flex items-center justify-center">
             <img
-              src="/datalyticscit_logo.png"
+              src="/GDGoC-CIT.png"
               alt="Club Logo"
-              className="w-25 h-25 md:w-30 md:h-30 object-contain"
+              className="w-25 h-25 md:w-40 md:h-40 rounded-full object-contain"
             />
           </div>
           <h1 className="text-3xl font-bold bg-linear-to-r from-white to-slate-300 bg-clip-text text-transparent">
-            Datalytics Admin Portal
+            GDGoC - CIT Admin Portal
           </h1>
         </div>
 
@@ -69,10 +69,6 @@ export default function Login({ setAuthed }) {
           <div className="relative z-10">
             <div className="mb-8 text-center">
               <h2 className="text-2xl font-bold text-white mb-3">Welcome</h2>
-              <p className="text-slate-400 text-sm leading-relaxed">
-                Only for our generation in Datalytics CIT.
-                <br />
-              </p>
             </div>
 
             <form onSubmit={handleLogin} className="space-y-6">
@@ -99,7 +95,7 @@ export default function Login({ setAuthed }) {
                   <input
                     type="email"
                     className="relative w-full pl-12 pr-4 py-4 bg-slate-900/60 border border-slate-700 rounded-xl text-white placeholder-slate-500 focus:border-purple-500/50 focus:ring-2 focus:ring-purple-500/20 transition-all duration-300"
-                    placeholder="admin@datalytics.com"
+                    placeholder="admin@gmail.com"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     required
@@ -292,61 +288,12 @@ export default function Login({ setAuthed }) {
             </p>
           </div>
           <p className="text-xs text-slate-600">
-            © 2024 Datalytics CIT • All Rights Reserved.
+            © {new Date().getFullYear()} GDGoC - CIT • All Rights Reserved.
           </p>
         </div>
       </div>
 
-      {/* Add custom animations to your global CSS */}
-      <style jsx>{`
-        @keyframes fade-in {
-          from {
-            opacity: 0;
-            transform: translateY(10px);
-          }
-          to {
-            opacity: 1;
-            transform: translateY(0);
-          }
-        }
-        @keyframes slide-up {
-          from {
-            opacity: 0;
-            transform: translateY(30px);
-          }
-          to {
-            opacity: 1;
-            transform: translateY(0);
-          }
-        }
-        @keyframes shake {
-          0%,
-          100% {
-            transform: translateX(0);
-          }
-          25% {
-            transform: translateX(-5px);
-          }
-          75% {
-            transform: translateX(5px);
-          }
-        }
-        .animate-fade-in {
-          animation: fade-in 0.6s ease-out;
-        }
-        .animate-slide-up {
-          animation: slide-up 0.6s ease-out;
-        }
-        .animate-shake {
-          animation: shake 0.5s ease-in-out;
-        }
-        .animation-delay-2000 {
-          animation-delay: 2s;
-        }
-        .animation-delay-4000 {
-          animation-delay: 4s;
-        }
-      `}</style>
+     
     </div>
   );
 }

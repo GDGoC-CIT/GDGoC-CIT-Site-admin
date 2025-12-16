@@ -21,9 +21,9 @@ import EditEvent from "./pages/EditEvent";
 // Title component to set document title
 const PageTitle = ({ title }) => {
   useEffect(() => {
-    document.title = `${title} | Datalytics Admin `;
+    document.title = `${title} | GDGoC - CIT Admin `;
     return () => {
-      document.title = "Datalytics Admin";
+      document.title = "GDGoC - CIT Admin";
     };
   }, [title]);
 

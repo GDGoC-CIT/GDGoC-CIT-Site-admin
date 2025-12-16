@@ -259,9 +259,9 @@ export default function AdminList() {
     .filter((a) => a.role === "superadmin")
     .sort((a, b) => {
       const priorityEmails = [
-        "mitraabaaburaj@gmail.com",
+        "rajkishorerk082004@gmail.com",
         "arunakhil9715@gmail.com",
-        "datalyticscit@cit.edu.in",
+        "gdgoncampuscit@gmail.com",
       ];
 
       const aEmail = a.email?.toLowerCase().trim();

@@ -126,13 +126,13 @@ export default function DashboardLayout({ setAuthed }) {
         <div className="px-4 sm:px-6 py-3 border-b border-slate-800/50">
           <div className="flex items-center gap-3 mb-3">
             <img
-              src="/datalyticscit_logo.png"
+              src="/GDGoC-CIT.png"
               alt="Club Logo"
-              className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 object-contain"
+              className="w-12 h-12 rounded-full sm:w-14 sm:h-14 md:w-20 md:h-20 object-contain"
             />
             <div>
               <h1 className="text-lg sm:text-xl font-bold bg-linear-to-r from-white to-slate-300 bg-clip-text text-transparent">
-                Datalytics
+                GDGoC - CIT
               </h1>
               <p className="text-xs text-slate-400">Management Portal</p>
             </div>
